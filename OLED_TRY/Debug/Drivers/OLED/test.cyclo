@@ -1,0 +1,6 @@
+test.c:28:6:TestLines	9
+test.c:118:6:TestRectangles	2
+test.c:135:6:TestFilledRectangles	2
+test.c:153:6:TestFilledCircles	3
+test.c:170:6:TestCircles	3
+test.c:189:6:TestTriangles	2
