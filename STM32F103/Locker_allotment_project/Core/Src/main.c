@@ -154,7 +154,7 @@ int main(void)
 	  status = MFRC522_Anticoll(str);
 	  memcpy(sNum, str, 5);
 	  HAL_Delay(100);
-
+	  HAL_Delay(100);
 	  	SSD1306_GotoXY (10, 10);
 		SSD1306_Puts ("Scan", &Font_11x18, 1);
 		SSD1306_GotoXY (10, 28);
