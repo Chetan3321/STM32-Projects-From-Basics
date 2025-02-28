@@ -60,8 +60,8 @@ all: main-build
 main-build: Locker_allotment_project.elf secondary-outputs
 
 # Tool invocations
-Locker_allotment_project.elf Locker_allotment_project.map: $(OBJS) $(USER_OBJS) D:\Learing\STm32F401_projects\Oled_Stm32_bluepill\STM32F103C6TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Locker_allotment_project.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\Learing\STm32F401_projects\Oled_Stm32_bluepill\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Locker_allotment_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Locker_allotment_project.elf Locker_allotment_project.map: $(OBJS) $(USER_OBJS) D:\GIT\Tutorial_C_language\STM32-Projects-From-Basics\STM32F103\Locker_allotment_project\STM32F103C6TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Locker_allotment_project.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\GIT\Tutorial_C_language\STM32-Projects-From-Basics\STM32F103\Locker_allotment_project\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Locker_allotment_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

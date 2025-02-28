@@ -61,6 +61,10 @@ void Error_Handler(void);
 #define LOCKER1_GPIO_Port GPIOC
 #define LED_Pin GPIO_PIN_15
 #define LED_GPIO_Port GPIOC
+#define LOCKER2_Pin GPIO_PIN_12
+#define LOCKER2_GPIO_Port GPIOB
+#define LOCKER3_Pin GPIO_PIN_13
+#define LOCKER3_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 
