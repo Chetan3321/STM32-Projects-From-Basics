@@ -212,7 +212,7 @@ int main(void)
 		 HAL_Delay(100);
 		 HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
 	 }
-	 else if(strcmp(sNum, "\x93\x20\x68\xA3\x7C") == 0)
+	 else if(strcmp(sNum, "\x2D\x5F\x92\xE0") == 0)
 	 {
 		 HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
 		 SSD1306_GotoXY (10, 10);
