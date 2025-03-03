@@ -1,2 +1,3 @@
 
-![Alt text](D:\GIT\Tutorial_C_language\STM32-Projects-From-Basics\STM32F103\Locker_allotment_project\slide1.png)
+
+![slide1](https://github.com/user-attachments/assets/42935ef5-6131-4455-b098-f47a5e0e5c56)
