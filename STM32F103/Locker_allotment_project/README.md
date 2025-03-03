@@ -1,3 +1,1 @@
-
-
-![slide1](https://github.com/user-attachments/assets/42935ef5-6131-4455-b098-f47a5e0e5c56)
+![cercit dig.](https://https://github.com/Chetan3321/STM32-Projects-From-Basics/blob/main/STM32F103/Locker_allotment_project/Slide1.PNG?raw=true)
