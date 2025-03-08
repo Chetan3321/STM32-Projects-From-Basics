@@ -407,7 +407,7 @@ int main(void)
  80003a6:	f001 faef 	bl	8001988 <HAL_GPIO_WritePin>
  80003aa:	e714      	b.n	80001d6 <main+0x76>
 	 }
-	 else if(strcmp(sNum, "\x2D\x5F\x92\xE0") == 0)
+	 else if(strcmp(sNum, "\x2D\x5F\x92\x00\xE0") == 0)
  80003ac:	493e      	ldr	r1, [pc, #248]	; (80004a8 <main+0x348>)
  80003ae:	4833      	ldr	r0, [pc, #204]	; (800047c <main+0x31c>)
  80003b0:	f7ff fecc 	bl	800014c <strcmp>
