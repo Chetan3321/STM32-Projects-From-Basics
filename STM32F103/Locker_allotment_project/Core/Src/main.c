@@ -108,7 +108,10 @@ int main(void)
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
 
-  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(LOCKER1_GPIO_Port, LOCKER1_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(LOCKER1_GPIO_Port, LOCKER2_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(LOCKER1_GPIO_Port, LOCKER3_Pin, GPIO_PIN_RESET);
+
   	MFRC522_Init();
 
 	SSD1306_Init (); // initialise the display
@@ -177,7 +180,7 @@ int main(void)
 		 HAL_Delay(100);
 
 		 HAL_GPIO_WritePin(LOCKER1_GPIO_Port, LOCKER1_Pin, GPIO_PIN_SET);
-		 HAL_Delay(1000);
+		 HAL_Delay(2000);
 		 HAL_GPIO_WritePin(LOCKER1_GPIO_Port, LOCKER1_Pin, GPIO_PIN_RESET);
 		 HAL_Delay(1000);
 		 memset(sNum, 0, sizeof(sNum));
@@ -201,7 +204,7 @@ int main(void)
 		 HAL_Delay(100);
 
 		 HAL_GPIO_WritePin(LOCKER2_GPIO_Port, LOCKER2_Pin, GPIO_PIN_SET);
-		 HAL_Delay(1000);
+		 HAL_Delay(2000);
 		 HAL_GPIO_WritePin(LOCKER2_GPIO_Port, LOCKER2_Pin, GPIO_PIN_RESET);
 		 HAL_Delay(1000);
 		 memset(sNum, 0, sizeof(sNum));
@@ -216,7 +219,7 @@ int main(void)
 	 {
 		 HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
 		 SSD1306_GotoXY (10, 10);
-		 SSD1306_Puts (" User 2 ", &Font_11x18, 1);
+		 SSD1306_Puts (" User 3 ", &Font_11x18, 1);
 		 SSD1306_GotoXY (10, 28);
 		 SSD1306_Puts (" Access", &Font_11x18, 1);
 		 SSD1306_GotoXY (10, 45);
@@ -225,7 +228,7 @@ int main(void)
 		 HAL_Delay(100);
 
 		 HAL_GPIO_WritePin(LOCKER3_GPIO_Port, LOCKER3_Pin, GPIO_PIN_SET);
-		 HAL_Delay(1000);
+		 HAL_Delay(2000);
 		 HAL_GPIO_WritePin(LOCKER3_GPIO_Port, LOCKER3_Pin, GPIO_PIN_RESET);
 		 HAL_Delay(1000);
 		 memset(sNum, 0, sizeof(sNum));
