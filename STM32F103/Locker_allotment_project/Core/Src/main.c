@@ -89,7 +89,7 @@ int main(void)
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  HAL_Init();
+		HAL_Init();
 
   /* USER CODE BEGIN Init */
 
@@ -109,8 +109,8 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   HAL_GPIO_WritePin(LOCKER1_GPIO_Port, LOCKER1_Pin, GPIO_PIN_RESET);
-  HAL_GPIO_WritePin(LOCKER1_GPIO_Port, LOCKER2_Pin, GPIO_PIN_RESET);
-  HAL_GPIO_WritePin(LOCKER1_GPIO_Port, LOCKER3_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(LOCKER2_GPIO_Port, LOCKER2_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(LOCKER3_GPIO_Port, LOCKER3_Pin, GPIO_PIN_RESET);
 
   	MFRC522_Init();
 
