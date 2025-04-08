@@ -68,9 +68,14 @@ static void MX_GPIO_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_SPI1_Init(void);
 /* USER CODE BEGIN PFP */
-
+void reset_lockers(void);
 /* USER CODE END PFP */
-
+void reset_lockers()
+{
+	HAL_GPIO_WritePin(LOCKER1_GPIO_Port, LOCKER1_Pin, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(LOCKER2_GPIO_Port, LOCKER2_Pin, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(LOCKER3_GPIO_Port, LOCKER3_Pin, GPIO_PIN_RESET);
+}
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
@@ -107,10 +112,7 @@ int main(void)
   MX_I2C1_Init();
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
-
-  HAL_GPIO_WritePin(LOCKER1_GPIO_Port, LOCKER1_Pin, GPIO_PIN_RESET);
-  HAL_GPIO_WritePin(LOCKER2_GPIO_Port, LOCKER2_Pin, GPIO_PIN_RESET);
-  HAL_GPIO_WritePin(LOCKER3_GPIO_Port, LOCKER3_Pin, GPIO_PIN_RESET);
+  	reset_lockers();
 
   	MFRC522_Init();
 
