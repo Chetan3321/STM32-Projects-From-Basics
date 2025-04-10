@@ -157,7 +157,7 @@ int main(void)
 	  status = MFRC522_Anticoll(str);
 	  memcpy(sNum, str, 5);
 	  HAL_Delay(100);
-	  HAL_Delay(100);
+
 	  	SSD1306_GotoXY (10, 10);
 		SSD1306_Puts ("Scan", &Font_11x18, 1);
 		SSD1306_GotoXY (10, 28);
@@ -165,6 +165,7 @@ int main(void)
 		SSD1306_GotoXY (10, 45);
 		SSD1306_Puts ("Card", &Font_11x18, 1);
 		SSD1306_UpdateScreen(); // update screen
+		HAL_Delay(100);
 
 	 if(strcmp(sNum, "\x83\x31\x84\xE4\xD2") == 0)
 	 {
