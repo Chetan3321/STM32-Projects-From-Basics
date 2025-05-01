@@ -1,7 +1,7 @@
 main.c:73:6:reset_lockers	1
-main.c:88:5:main	11
-main.c:275:6:SystemClock_Config	3
-main.c:315:13:MX_I2C1_Init	2
-main.c:349:13:MX_SPI1_Init	2
-main.c:387:13:MX_GPIO_Init	1
-main.c:441:6:Error_Handler	1
+main.c:91:5:main	11
+main.c:278:6:SystemClock_Config	3
+main.c:318:13:MX_I2C1_Init	2
+main.c:352:13:MX_SPI1_Init	2
+main.c:390:13:MX_GPIO_Init	1
+main.c:444:6:Error_Handler	1

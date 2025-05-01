@@ -73,8 +73,11 @@ void reset_lockers(void);
 void reset_lockers()
 {
 	HAL_GPIO_WritePin(LOCKER1_GPIO_Port, LOCKER1_Pin, GPIO_PIN_RESET);
-	HAL_GPIO_WritePin(LOCKER2_GPIO_Port, LOCKER2_Pin, GPIO_PIN_RESET);
-	HAL_GPIO_WritePin(LOCKER3_GPIO_Port, LOCKER3_Pin, GPIO_PIN_RESET);
+	HAL_Delay(1000);
+	HAL_GPIO_WritePin(LOCKER2_GPIO_Port, LOCKER2_Pin, GPIO_PIN_SET);
+	HAL_Delay(1000);
+	HAL_GPIO_WritePin(LOCKER3_GPIO_Port, LOCKER3_Pin, GPIO_PIN_SET);
+	HAL_Delay(1000);
 }
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
@@ -205,9 +208,9 @@ int main(void)
 		 SSD1306_UpdateScreen(); // update screen
 		 HAL_Delay(100);
 
-		 HAL_GPIO_WritePin(LOCKER2_GPIO_Port, LOCKER2_Pin, GPIO_PIN_SET);
-		 HAL_Delay(2000);
 		 HAL_GPIO_WritePin(LOCKER2_GPIO_Port, LOCKER2_Pin, GPIO_PIN_RESET);
+		 HAL_Delay(2000);
+		 HAL_GPIO_WritePin(LOCKER2_GPIO_Port, LOCKER2_Pin, GPIO_PIN_SET);
 		 HAL_Delay(1000);
 		 memset(sNum, 0, sizeof(sNum));
 		 memset(str, 0, sizeof(str));
@@ -229,9 +232,9 @@ int main(void)
 		 SSD1306_UpdateScreen(); // update screen
 		 HAL_Delay(100);
 
-		 HAL_GPIO_WritePin(LOCKER3_GPIO_Port, LOCKER3_Pin, GPIO_PIN_SET);
-		 HAL_Delay(2000);
 		 HAL_GPIO_WritePin(LOCKER3_GPIO_Port, LOCKER3_Pin, GPIO_PIN_RESET);
+		 HAL_Delay(2000);
+		 HAL_GPIO_WritePin(LOCKER3_GPIO_Port, LOCKER3_Pin, GPIO_PIN_SET);
 		 HAL_Delay(1000);
 		 memset(sNum, 0, sizeof(sNum));
 		 memset(str, 0, sizeof(str));
